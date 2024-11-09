@@ -1,2 +1,2 @@
 # App-dev
-News Feed Android App
+Repository for Connor's app development projects!
