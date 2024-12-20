@@ -1,0 +1,295 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItem"
+    android:id="@+id/main"
+    android:background="?attr/backgroundColor">
+
+    <!-- App Bar Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?attr/colorPrimaryVariant"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.1">
+
+        <Spinner
+            android:id="@+id/themeSpinner"
+            style="@android:style/Widget.Material.Light.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent=".8"
+            android:layout_margin="8dp"
+            android:background="@drawable/spinner_background"
+            android:gravity="center_vertical"
+            android:outlineProvider="bounds"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:popupBackground="?attr/colorPrimary"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/helpButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/helpButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:outlineProvider="background"
+            android:textSize="16dp"
+            android:text="Help"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".95"
+            app:layout_constraintStart_toEndOf="@id/themeSpinner"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#EFEFEF" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Add Item Header Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/titleSection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.10"
+        app:layout_constraintTop_toBottomOf="@id/appBar"
+        android:background="?attr/colorOnPrimary">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="Add Item"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Item Details Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemDetailsSection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/titleSection"
+        app:layout_constraintBottom_toTopOf="@id/buttonSection"
+        app:layout_constraintHeight_percent="0.5">
+
+        <!-- Section for Item Name -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itemNameSection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent="0.25">
+
+            <TextView
+                android:id="@+id/itemNameLabel"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.70"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintWidth_percent="0.30"
+                android:layout_marginStart="16dp"
+                android:text="Item Name"
+                android:textColor="?attr/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/itemNameInput"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/itemNameInput"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.6"
+                android:background="?attr/colorOnBackground"
+                android:textColor="?attr/colorOnSurface"
+                android:textColorHint="?attr/colorOnSurface"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintWidth_percent="0.50"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Enter Item Name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/itemNameLabel"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Section for Item Quantity -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itemQuantitySection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/itemNameSection"
+            app:layout_constraintHeight_percent="0.25">
+
+            <TextView
+                android:id="@+id/itemQuantityLabel"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.70"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintWidth_percent="0.30"
+                android:layout_marginStart="16dp"
+                android:text="Item Quantity"
+                android:textColor="?attr/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/itemQuantityInput"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/itemQuantityInput"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.6"
+                android:background="?attr/colorOnBackground"
+                android:textColor="?attr/colorOnSurface"
+                android:textColorHint="?attr/colorOnSurface"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintWidth_percent="0.50"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Enter Quantity"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/itemQuantityLabel"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Section for Item Cost -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itemCostSection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/itemQuantitySection"
+            app:layout_constraintHeight_percent="0.25">
+
+            <TextView
+                android:id="@+id/itemCostLabel"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.70"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintWidth_percent="0.30"
+                android:layout_marginStart="16dp"
+                android:text= "Total Item Cost"
+                android:textColor="?attr/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/itemCostInput"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/itemCostInput"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.6"
+                android:background="?attr/colorOnBackground"
+                android:textColor="?attr/colorOnSurface"
+                android:textColorHint="?attr/colorOnSurface"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintWidth_percent="0.50"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Enter Total Item Cost"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/itemCostLabel"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Section for Buy Before Date Picker -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buyBeforeDateSection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/itemCostSection"
+            app:layout_constraintHeight_percent="0.25">
+
+            <TextView
+                android:id="@+id/buyBeforeLabel"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.70"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintWidth_percent="0.30"
+                android:layout_marginStart="16dp"
+                android:text="Buy Before"
+                android:textColor="?attr/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/datePickerButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/datePickerButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent=".8"
+                android:textSize="18dp"
+                app:layout_constraintWidth_percent="0.40"
+                android:layout_marginStart="8dp"
+                android:text="Select Date"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="?attr/colorOnPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/buyBeforeLabel"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/calendarImage"
+                android:layout_width="69dp"
+                android:layout_height="38dp"
+                app:layout_constraintBottom_toBottomOf="@+id/datePickerButton"
+                app:layout_constraintEnd_toStartOf="@+id/datePickerButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/calendar_icon_png__0"
+                app:tint="?attr/colorOnSurface" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Bottom Button Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonSection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailsSection"
+        app:layout_constraintHeight_percent="0.25"
+        >
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="0dp"
+            app:layout_constraintHeight_percent="0.50"
+            android:text="Save"
+            android:textSize="20dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="8dp"
+            android:layout_height="0dp"/>
+
+    <!-- Fragment Section Below Save Button -->
+    <FrameLayout
+        android:id="@+id/navigationFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.50"
+        app:layout_constraintTop_toBottomOf="@id/saveButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <include layout="@layout/fragment_navigation" />
+    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<resources>
+    <!-- Default Theme -->
+    <style name="Theme.FinalProject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorPrimaryVariant">#3700B3</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#FF4081</item> <!-- A softer, modern secondary color -->
+        <item name="colorOnBackground">#E0F7FA</item> <!-- Softer background color for better contrast -->
+        <item name="backgroundColor">#B3E5FC</item> <!-- Lighter background for more pleasant visual appearance -->
+        <item name="colorOnSurface">#000000</item> <!-- Black text -->
+    </style>
+
+    <!-- Light Theme -->
+    <style name="Theme.App.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#0288D1</item> <!-- Slightly darker shade of blue for better contrast -->
+        <item name="colorPrimaryVariant">#01579B</item> <!-- Darker blue for a stronger contrast -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- White text on primary color for readability -->
+        <item name="colorSecondary">#FF9800</item> <!-- More vibrant secondary color for a lively feel -->
+        <item name="colorOnBackground">#D3D3D3</item> <!-- Darker text for better readability -->
+        <item name="backgroundColor">#FFFFFF</item> <!-- Clean white background for a bright theme -->
+        <item name="colorOnSurface">#000000</item> <!-- Black text -->
+    </style>
+
+    <!-- Dark Theme -->
+    <style name="Theme.App.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#444444</item> <!-- Dark grey for primary background -->
+        <item name="colorPrimaryVariant">#212121</item> <!-- Even darker grey for stronger emphasis -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- White text on primary background -->
+        <item name="colorSecondary">#8E24AA</item> <!-- Dark purple for secondary color -->
+        <item name="colorOnBackground">#444444</item> <!-- Lighter grey text on background -->
+        <item name="backgroundColor">#121212</item> <!-- Dark background for dark theme -->
+        <item name="colorOnSurface">#FFFFFF</item> <!-- White text on surface -->
+    </style>
+</resources>

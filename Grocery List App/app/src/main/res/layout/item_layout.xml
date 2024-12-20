@@ -1,0 +1,100 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+    <!-- Title Section -->
+    <!-- First row: Image and grocery item -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/taskCheckBox"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user" />
+
+        <TextView
+            android:id="@+id/groceryItem"
+            android:layout_width="228dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:text="Sample Grocery Item"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/taskCheckBox"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="94dp"
+            android:layout_height="40dp"
+            android:autoSizeTextType="uniform"
+            android:text="Sample Cost"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/groceryItem"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="60dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:text="Before:"
+            android:textColor="?attr/colorOnSurface"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintStart_toEndOf="@+id/taskCheckBox"
+            app:layout_constraintTop_toBottomOf="@+id/groceryItem" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="148dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="2dp"
+            android:autoSizeTextType="uniform"
+            android:text="Date"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintStart_toEndOf="@+id/taskCheckBox"
+            app:layout_constraintTop_toBottomOf="@+id/groceryItem" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Second row: Username -->
+
+    <!-- Date: Positioned below the username -->
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="58dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="4dp"
+        android:text="User"
+        android:textColor="?attr/colorOnSurface"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="395dp"
+        android:layout_height="6dp"
+        android:background="?attr/colorOnSurface"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
