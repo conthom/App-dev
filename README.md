@@ -1,2 +1,2 @@
 # App-dev
-Repository for various App dev projects
+Repository for Apps I've worked on for my Android mobile app development class 
