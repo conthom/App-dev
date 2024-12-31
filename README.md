@@ -1,2 +1,2 @@
 # App-dev
-Repository for Connor's Android app development projects!
+Repository for various App dev projects
